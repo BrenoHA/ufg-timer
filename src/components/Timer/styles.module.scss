@@ -1,0 +1,55 @@
+.container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #2d2d38;
+}
+
+.title {
+  margin-top: -80px;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.numberWeek {
+  font-size: 4rem;
+  margin-bottom: -10px;
+}
+
+.numberDay {
+  font-size: 3rem;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.numberInside span {
+  font-size: 2rem;
+}
+
+.weekCounter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counters {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.finalText {
+  padding-top: 40px;
+  font-size: 0.8rem;
+}
