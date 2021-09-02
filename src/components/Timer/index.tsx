@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
+import Image from 'next/image';
+import fullLogo from '../../../public/FullLogo.svg';
 
 type TimerType = {
   weeks: number;
@@ -8,6 +10,8 @@ type TimerType = {
   minutes: number;
   seconds: number;
 };
+
+// const fullLogo = 'https://i.ibb.co/yXC166Q/FullLogo.png';
 
 const TimerComponent = () => {
   const calculateTimeLeft = () => {
@@ -37,7 +41,8 @@ const TimerComponent = () => {
 
   return (
     <div className={styles.container}>
-      <span className={styles.title}>UFG Timer</span>
+      {/* <span className={styles.title}>UFG Timer</span> */}
+      <Image src={fullLogo} alt="Logo" width={250} height={130} />
       <div className={styles.subtitle}>
         <span>Faltam exatamente:</span>
       </div>
