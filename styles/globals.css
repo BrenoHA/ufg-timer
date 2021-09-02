@@ -6,6 +6,8 @@ body {
   color: #bec2d4;
   font-family: 'Rubik', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
     Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #2d2d38;
+  overflow: hidden;
 }
 
 a {
