@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  height: 80vh;
 
   display: flex;
   justify-content: center;
@@ -7,12 +7,6 @@
   flex-direction: column;
 
   background-color: #2d2d38;
-}
-
-.title {
-  margin-top: -80px;
-  margin-bottom: 40px;
-  font-size: 2rem;
 }
 
 .numberWeek {
