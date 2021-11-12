@@ -43,7 +43,17 @@ const TimerComponent = () => {
     <div className={styles.container}>
       {/* <span className={styles.title}>UFG Timer</span> */}
       <Image src={fullLogo} alt="Logo" width={250} height={130} />
-      <div className={styles.subtitle}>
+      <div className={styles.counters}>
+        <span className={styles.finalMsg}>Acabou já!</span>
+        <span>Vai aproveitar as férias</span>
+      </div>
+      <img
+        className={styles.imgGif}
+        src="https://i.pinimg.com/originals/3c/1b/79/3c1b796e422435beccdf379027a468d7.gif"
+        alt="gif"
+        height="200px"
+      />
+      {/* <div className={styles.subtitle}>
         <span>Faltam exatamente:</span>
       </div>
       <div className={styles.weekCounter}>
@@ -58,7 +68,7 @@ const TimerComponent = () => {
       </div>
       <div className={styles.finalText}>
         <span>Para a felicidade e final do semestre</span>
-      </div>
+      </div> */}
     </div>
   );
 };
