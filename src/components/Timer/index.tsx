@@ -15,7 +15,7 @@ type TimerType = {
 
 const TimerComponent = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date(`2021-11-11T23:59:59`) - +new Date();
+    const difference = +new Date(`2022-04-14T23:59:59`) - +new Date();
     let timeLeft = {} as TimerType;
 
     if (difference > 0) {
@@ -43,7 +43,7 @@ const TimerComponent = () => {
     <div className={styles.container}>
       {/* <span className={styles.title}>UFG Timer</span> */}
       <Image src={fullLogo} alt="Logo" width={250} height={130} />
-      <div className={styles.counters}>
+      {/* <div className={styles.counters}>
         <span className={styles.finalMsg}>Acabou já!</span>
         <span>Vai aproveitar as férias</span>
       </div>
@@ -52,8 +52,8 @@ const TimerComponent = () => {
         src="https://i.pinimg.com/originals/3c/1b/79/3c1b796e422435beccdf379027a468d7.gif"
         alt="gif"
         height="200px"
-      />
-      {/* <div className={styles.subtitle}>
+      /> */}
+      <div className={styles.subtitle}>
         <span>Faltam exatamente:</span>
       </div>
       <div className={styles.weekCounter}>
@@ -68,7 +68,7 @@ const TimerComponent = () => {
       </div>
       <div className={styles.finalText}>
         <span>Para a felicidade e final do semestre</span>
-      </div> */}
+      </div>
     </div>
   );
 };
