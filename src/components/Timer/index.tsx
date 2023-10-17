@@ -15,7 +15,7 @@ type TimerType = {
 
 const TimerComponent = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date(`2023-08-24T23:59:59`) - +new Date(); //YYYY-MM-DD
+    const difference = +new Date(`2024-02-06T23:59:59`) - +new Date(); //YYYY-MM-DD
     let timeLeft = {} as TimerType;
 
     if (difference > 0) {
