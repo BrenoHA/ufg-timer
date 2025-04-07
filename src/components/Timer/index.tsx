@@ -15,7 +15,7 @@ type TimerType = {
 
 const TimerComponent = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date(`2024-02-06T23:59:59`) - +new Date(); //YYYY-MM-DD
+    const difference = +new Date(`2025-07-05T23:59:59`) - +new Date(); //YYYY-MM-DD
     let timeLeft = {} as TimerType;
 
     if (difference > 0) {
@@ -42,10 +42,14 @@ const TimerComponent = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-  });
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const isTimeUp = Object.values(timeLeft).every(value => value === 0);
 
   return (
     <div className={styles.container}>
@@ -61,22 +65,37 @@ const TimerComponent = () => {
         alt="gif"
         height="200px"
       />  */}
-      <div className={styles.subtitle}>
-        <span>Faltam exatamente:</span>
-      </div>
-      <div className={styles.weekCounter}>
-        <span className={styles.numberWeek}>{timeLeft.weeks}</span>
-        <span>semanas</span>
-      </div>
-      <div className={styles.counters}>
-        <span className={styles.numberInside}>
-          <span>{timeLeft.days}</span>d <span>{timeLeft.hours}</span>h <span>{timeLeft.minutes}</span>
-          min <span>{timeLeft.seconds}</span>s
-        </span>
-      </div>
-      <div className={styles.finalText}>
-        <span>Para a felicidade e final do semestre</span>
-      </div>
+      {isTimeUp ? (
+        <div className={styles.counters}>
+          <span className={styles.finalMsg}>Acabou já!</span>
+          <span>Vai aproveitar as férias</span>
+          <img
+            className={styles.imgGif}
+            src="https://i.pinimg.com/originals/3c/1b/79/3c1b796e422435beccdf379027a468d7.gif"
+            alt="gif"
+            height="200"
+          />
+        </div>
+      ) : (
+        <>
+          <div className={styles.subtitle}>
+            <span>Faltam exatamente:</span>
+          </div>
+          <div className={styles.weekCounter}>
+            <span className={styles.numberWeek}>{timeLeft.weeks}</span>
+            <span>semanas</span>
+          </div>
+          <div className={styles.counters}>
+            <span className={styles.numberInside}>
+              <span>{timeLeft.days}</span>d <span>{timeLeft.hours}</span>h <span>{timeLeft.minutes}</span>min{' '}
+              <span>{timeLeft.seconds}</span>s
+            </span>
+          </div>
+          <div className={styles.finalText}>
+            <span>Para a felicidade e final do semestre</span>
+          </div>
+        </>
+      )}
     </div>
   );
 };
