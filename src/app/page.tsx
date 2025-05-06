@@ -61,7 +61,7 @@ export default function Home() {
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.weeks}
             </div>
-            <div className="text-gray-300 text-xs sm:text-base">Weeks</div>
+            <div className="text-gray-300 text-xs sm:text-base">Semanas</div>
           </div>
         </div>
 
@@ -71,25 +71,25 @@ export default function Home() {
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.days}
             </div>
-            <div className="text-gray-300 text-xs sm:text-base">Days</div>
+            <div className="text-gray-300 text-xs sm:text-base">Dias</div>
           </div>
           <div className="timer-box p-3 sm:p-6 rounded-lg">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.hours}
             </div>
-            <div className="text-gray-300 text-xs sm:text-base">Hours</div>
+            <div className="text-gray-300 text-xs sm:text-base">Horas</div>
           </div>
           <div className="timer-box p-3 sm:p-6 rounded-lg">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.minutes}
             </div>
-            <div className="text-gray-300 text-xs sm:text-base">Minutes</div>
+            <div className="text-gray-300 text-xs sm:text-base">Minutos</div>
           </div>
           <div className="timer-box p-3 sm:p-6 rounded-lg">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.seconds}
             </div>
-            <div className="text-gray-300 text-xs sm:text-base">Seconds</div>
+            <div className="text-gray-300 text-xs sm:text-base">Segundos</div>
           </div>
         </div>
 
