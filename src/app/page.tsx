@@ -42,8 +42,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
-      <div className="w-full max-w-4xl text-center px-4">
+    <main className="min-h-screen flex flex-col items-center p-10 gradient-bg select-none">
+      <div className="w-full max-w-3xl text-center cursor-default">
         <Image
           src="/FullLogo.svg"
           alt="Full Logo"
@@ -57,7 +57,7 @@ export default function Home() {
 
         {/* Weeks Section */}
         <div className="mb-6 flex justify-center">
-          <div className="timer-box p-3 sm:p-6 rounded-lg w-[120px] sm:w-[160px]">
+          <div className="timer-box p-3 sm:p-6 rounded-lg w-[120px] sm:w-[160px] flex flex-col items-center">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.weeks}
             </div>
@@ -67,25 +67,25 @@ export default function Home() {
 
         {/* Other Time Units */}
         <div className="grid grid-cols-4 gap-2 sm:gap-4">
-          <div className="timer-box p-3 sm:p-6 rounded-lg">
+          <div className="timer-box p-3 sm:p-6 rounded-lg flex flex-col items-center">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.days}
             </div>
             <div className="text-gray-300 text-xs sm:text-base">Dias</div>
           </div>
-          <div className="timer-box p-3 sm:p-6 rounded-lg">
+          <div className="timer-box p-3 sm:p-6 rounded-lg flex flex-col items-center">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.hours}
             </div>
             <div className="text-gray-300 text-xs sm:text-base">Horas</div>
           </div>
-          <div className="timer-box p-3 sm:p-6 rounded-lg">
+          <div className="timer-box p-3 sm:p-6 rounded-lg flex flex-col items-center">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.minutes}
             </div>
             <div className="text-gray-300 text-xs sm:text-base">Minutos</div>
           </div>
-          <div className="timer-box p-3 sm:p-6 rounded-lg">
+          <div className="timer-box p-3 sm:p-6 rounded-lg flex flex-col items-center">
             <div className="timer-number text-2xl sm:text-4xl font-bold text-white">
               {timeLeft.seconds}
             </div>
